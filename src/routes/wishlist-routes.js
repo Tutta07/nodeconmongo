@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const WishlistController = require("../controllers/wishlist-controller");
+const WishlistController = require("../controller/wishlist-controller");
 
 router.get("/wishlist", WishlistController.getAllWishlists);
 

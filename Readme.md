@@ -1,5 +1,5 @@
 Recursos de la API
 
-/whislist
+/wishlist
 
 POST -criar uma lista GET- buscar uma lista

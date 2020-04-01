@@ -1,5 +1,5 @@
  
-const Wishlist = require("../models/wishlist");
+const Wishlist = require("../model/wishlist");
 
 function getAllWishlists(request, response) {
   Wishlist.find({})
@@ -7,7 +7,7 @@ function getAllWishlists(request, response) {
       response.status(200).send(wishlists);
     })
     .catch(function(err) {
-      response.status(500).send({ message: "Ops! Ocorreu um erro" });
+      response.status(500).send({ message: "Huy! Tenemos un error" });
     });
 }
 
@@ -20,13 +20,13 @@ function createWishlist(request, response) {
 
   Wishlist.create(wishlist)
     .then(function() {
-      response.status(201).send({ message: "Wishlist createtd" });
+      response.status(201).send({ message: "Creamos su Wishlist" });
     })
     .catch(function(err) {
       console.error(err);
       response
         .status(500)
-        .send({ message: "Ops! Estamos com alguns problemas." });
+        .send({ message: "Huy! Estamos teniendo algunos problemas." });
     });
 }
 
